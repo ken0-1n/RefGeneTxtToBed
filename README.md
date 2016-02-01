@@ -1,7 +1,7 @@
 # RefGeneTxtToBed
 Convert UCSC refGene.txt to bed format
 
-## get refGene.txt
+## get refGene.txt from UCSC 
 ```
 http://hgdownload.cse.ucsc.edu/goldenPath/hg19/database/refGene.txt.gz
 ```

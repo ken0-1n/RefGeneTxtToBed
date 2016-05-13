@@ -2,7 +2,7 @@
 Convert UCSC refGene.txt to bed format
 
 ## Dependency
-Python (>= 2.7)
+Python (>= 2.7), 
 [bedtools-2.24.0](http://code.google.com/p/bedtools/)
 
 ## Get refGene.txt from UCSC 

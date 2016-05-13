@@ -5,9 +5,20 @@ import os.path
 import subprocess
 from subprocess import Popen, PIPE
 
+if (len(sys.argv) != 3): 
+    print ''
+    print 'Usage: # python %s filename refGene.txt.gz bedtools_path' % sys.argv[0]
+    print ''
+    quit()
+
+scriptDir = os.path.dirname(sys.argv[0])
+if scriptDir == "":  scriptDir = "."
+print scriptDir
+
 inputFile = sys.argv[1]
 BEDToolsPath = sys.argv[2]
 outputPath = os.path.dirname(inputFile)
+if outputPath == "":  outputPath = "."
 
 h3PUTR = open(outputPath + "refGene.coding.3putr.tmp.bed","w")
 h5PUTR = open(outputPath + "refGene.coding.5putr.tmp.bed","w")
@@ -94,7 +105,7 @@ h5PUTR.close()
 hEXON.close()
 hINTRON.close()
 
-cmd_list = ['bash','./merge_bed.sh', BEDToolsPath]
+cmd_list = ['bash', scriptDir + '/merge_bed.sh', BEDToolsPath, outputPath]
 proc = subprocess.Popen(cmd_list, stderr=subprocess.PIPE)
 print 'return: %d' % (proc.wait(), )
 print 'stderr: %s' % (proc.stderr.readlines(), )

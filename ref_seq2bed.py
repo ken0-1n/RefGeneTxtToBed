@@ -13,7 +13,6 @@ if (len(sys.argv) != 3):
 
 scriptDir = os.path.dirname(sys.argv[0])
 if scriptDir == "":  scriptDir = "."
-print scriptDir
 
 inputFile = sys.argv[1]
 BEDToolsPath = sys.argv[2]

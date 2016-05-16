@@ -19,10 +19,10 @@ BEDToolsPath = sys.argv[2]
 outputPath = os.path.dirname(inputFile)
 if outputPath == "":  outputPath = "."
 
-h3PUTR = open(outputPath + "refGene.coding.3putr.tmp.bed","w")
-h5PUTR = open(outputPath + "refGene.coding.5putr.tmp.bed","w")
-hEXON = open(outputPath + "refGene.coding.exon.tmp.bed","w")
-hINTRON = open(outputPath + "refGene.coding.intron.tmp.bed","w")
+h3PUTR = open(outputPath + "/refGene.coding.3putr.tmp.bed","w")
+h5PUTR = open(outputPath + "/refGene.coding.5putr.tmp.bed","w")
+hEXON = open(outputPath + "/refGene.coding.exon.tmp.bed","w")
+hINTRON = open(outputPath + "/refGene.coding.intron.tmp.bed","w")
 
 scaffold_list= [
         'chr4_ctg9_hap1',
@@ -73,7 +73,7 @@ for line in hIN:
     ends = F[10].split(',')
     symbol = F[12]
 
-    chr = chr.replace('chr', '')
+    # chr = chr.replace('chr', '')
 
     for i in range(0, len(starts) - 1):
         if (min(int(ends[i]), cdsStart) - int(starts[i]) > 0): 

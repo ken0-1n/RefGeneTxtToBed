@@ -2,12 +2,13 @@
 Convert UCSC refGene.txt to bed format
 
 ## Dependency
-Python (>= 2.7), 
+Python (>= 3.6), 
 [bedtools-2.24.0](http://code.google.com/p/bedtools/)
 
 ## Get refGene.txt from UCSC 
 ```
 http://hgdownload.cse.ucsc.edu/goldenPath/hg19/database/refGene.txt.gz
+http://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/refGene.txt.gz
 ```
 
 ## Execute 
